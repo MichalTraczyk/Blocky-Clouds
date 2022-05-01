@@ -1,0 +1,4 @@
+-Create a script (SaveManager)
+-Create an Input Field UI Object.
+-When the player finish writing its name/nickname, save that string value.
+-When you start the game, display the saved string

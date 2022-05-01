@@ -1,0 +1,176 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &608293869
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 608293870}
+  - component: {fileID: 608293871}
+  m_Layer: 10
+  m_Name: DayVolume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &608293870
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608293869}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.226245, y: 8.2350445, z: -6.089507}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6031068620553688576}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &608293871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608293869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 44c8ec55a17b851489c59e6496babf52, type: 2}
+--- !u!1 &791969637
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 791969639}
+  - component: {fileID: 791969638}
+  m_Layer: 10
+  m_Name: NightVolume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &791969639
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791969637}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.226245, y: 8.2350445, z: -6.089507}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6031068620553688576}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &791969638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791969637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 25ee9e6b307c7494d800395db34c30bb, type: 2}
+--- !u!1 &6031068620553688578
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6031068620553688576}
+  - component: {fileID: 6031068620553688579}
+  m_Layer: 0
+  m_Name: Game manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6031068620553688576
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6031068620553688578}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.8907185, y: -8.1959, z: 9.389872}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 791969639}
+  - {fileID: 608293870}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6031068620553688579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6031068620553688578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3a219a8e0e2dc94cb2c9cbc648e577d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allMaps:
+  - {fileID: 11400000, guid: c5057c1ece5094245b364d0151e9a25a, type: 2}
+  - {fileID: 11400000, guid: cafc89ede0761974a89db0a84beb91f5, type: 2}
+  - {fileID: 11400000, guid: 3693d6eea58e268419dd1c11d0db4a69, type: 2}
+  - {fileID: 11400000, guid: 5da58746e0948f3478b7a6512c83360a, type: 2}
+  - {fileID: 11400000, guid: 2843669a429df0c46b878d5a31c2b6f5, type: 2}
+  - {fileID: 11400000, guid: 878208ae20151a94fae49305d3c005fb, type: 2}
+  - {fileID: 11400000, guid: dcc1768d638bca04c8b47fa92cb3eda9, type: 2}
+  - {fileID: 11400000, guid: 25b1590a23dd22a448b44a6cb2192c68, type: 2}
+  HQSkyboxes:
+  - {fileID: 11400000, guid: 9245e17e709bb274ab350f15b39a0e77, type: 2}
+  - {fileID: 11400000, guid: 52cfc25551bac8d42970ba6503121241, type: 2}
+  - {fileID: 11400000, guid: 241df2b4d9fbacb44bd34a510d99b01a, type: 2}
+  - {fileID: 11400000, guid: 5828869438413b4499f041ae7d108889, type: 2}
+  - {fileID: 11400000, guid: 2bad4b12371204749867a6bcfb036e19, type: 2}
+  LQSkyboxes:
+  - {fileID: 11400000, guid: 6d6b31e40032ebb47adbdba2e41c32d0, type: 2}
+  - {fileID: 11400000, guid: 39a2d3647b16ab549a445bdfc4ca3ec4, type: 2}
+  - {fileID: 11400000, guid: 9bf3eb2f7b22cb44082a23e4a990c3c3, type: 2}
+  - {fileID: 11400000, guid: 0a8fa38cd1d557049b90ca825be3dd2c, type: 2}
+  - {fileID: 11400000, guid: a305511db71ba2047acec3f8157df885, type: 2}
+  currSkybox: {fileID: 0}
+  tex1: {fileID: 0}
+  targetMoves: 12
+  groundLayers:
+    serializedVersion: 2
+    m_Bits: 256
+  hint: 
+  DayVolume: {fileID: 608293869}
+  NightVolume: {fileID: 791969637}
+  hitParticles: {fileID: 727991907660095848, guid: 89dce37ade8063742b5312f90a6ea523,
+    type: 3}
+  skyboxScrollSpeed: 4

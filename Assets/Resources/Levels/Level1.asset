@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb1e8910e6b2a4493e1a2ae0863d61, type: 3}
+  m_Name: Level1
+  m_EditorClassIdentifier: 
+  mapPrefab: {fileID: 5625936292971435647, guid: 3f0d00ba58315a84bb049cb37bc1a576,
+    type: 3}
+  targetMoves: 9
+  hint: Straight path is not always the best path
