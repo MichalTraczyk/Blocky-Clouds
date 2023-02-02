@@ -1,4 +1,0 @@
-repository "Block destroyer@Traczo@cloud"
-  path "/"
-    br "/main"
-    co "/main"
