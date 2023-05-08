@@ -178,6 +178,11 @@ PrefabInstance:
       propertyPath: teleportColor.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1782227670945748240, guid: 11bc11c113c150d4694db164b74ffc31,
+        type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1af1f7322d8319f42bd7b2020502295c, type: 2}
     - target: {fileID: 1782227670945748241, guid: 11bc11c113c150d4694db164b74ffc31,
         type: 3}
       propertyPath: m_Mesh
@@ -193,6 +198,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2315469848154522849, guid: 11bc11c113c150d4694db164b74ffc31,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1af1f7322d8319f42bd7b2020502295c, type: 2}
     - target: {fileID: 4020635412917766957, guid: 11bc11c113c150d4694db164b74ffc31,
         type: 3}
       propertyPath: m_RootOrder
@@ -247,6 +257,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4166816487196693100, guid: 11bc11c113c150d4694db164b74ffc31,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4166816487196693100, guid: 11bc11c113c150d4694db164b74ffc31,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.8745098
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11bc11c113c150d4694db164b74ffc31, type: 3}
@@ -1973,6 +1993,11 @@ PrefabInstance:
       propertyPath: teleportColor.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1782227670945748240, guid: 11bc11c113c150d4694db164b74ffc31,
+        type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1af1f7322d8319f42bd7b2020502295c, type: 2}
     - target: {fileID: 1782227670945748241, guid: 11bc11c113c150d4694db164b74ffc31,
         type: 3}
       propertyPath: m_Mesh
@@ -1988,6 +2013,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2315469848154522849, guid: 11bc11c113c150d4694db164b74ffc31,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1af1f7322d8319f42bd7b2020502295c, type: 2}
     - target: {fileID: 4020635412917766957, guid: 11bc11c113c150d4694db164b74ffc31,
         type: 3}
       propertyPath: m_RootOrder
@@ -2042,6 +2072,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4166816487196693100, guid: 11bc11c113c150d4694db164b74ffc31,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4166816487196693100, guid: 11bc11c113c150d4694db164b74ffc31,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.8745098
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11bc11c113c150d4694db164b74ffc31, type: 3}
