@@ -9,7 +9,7 @@ public class Doors : MonoBehaviour
     public bool opened;
     Animator animator;
     [SerializeField]
-    int openedRequests = 0;
+    private int openedRequests = 0;
     CinemachineImpulseSource impulseSoure;
     private void Awake()
     {

@@ -36,11 +36,11 @@ public class MovableBlock : MonoBehaviour
             return;
         if (move.magnitude == 0)
             return;
-        if (GameManager.Instance.WallInFront(transform.position, move))
+        if (MoveManager.Instance.WallInFront(transform.position, move))
         {
             return;
         }
-        if (!GameManager.Instance.ValidFloorCheck(transform.position + move))
+        if (!MoveManager.Instance.ValidFloorCheck(transform.position + move))
         {
             return;
         }

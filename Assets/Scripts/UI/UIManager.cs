@@ -11,21 +11,27 @@ public class UIManager : MonoBehaviour
     public static UIManager Instance;
 
     [Header("Gameplay UI")]
-    public TextMeshProUGUI hintText;
     [SerializeField]
-    TextMeshProUGUI actualMoves;
-    [SerializeField]
-    TextMeshProUGUI targetMoves;
+    private TextMeshProUGUI hintText;
 
-    Animator animator;
+    [SerializeField]
+    private TextMeshProUGUI actualMoves;
+
+    [SerializeField]
+    private TextMeshProUGUI targetMoves;
+
     [Header("Level finished panel")]
-    public GameObject gameEndPanel;
+    [SerializeField] private GameObject gameEndPanel;
 
-    public GameObject endStar;
-    public GameObject movesStar;
-    public GameObject coinsStar;
+    [SerializeField] private GameObject endStar;
+    [SerializeField] private GameObject movesStar;
+    [SerializeField] private GameObject coinsStar;
+
+
     [Header("Pause panel")]
-    public GameObject pausePanel;
+    [SerializeField]
+
+    private Animator animator;
     private void Awake()
     {
         if (Instance != null)
@@ -38,14 +44,9 @@ public class UIManager : MonoBehaviour
     private void Start()
     {
         Setup();
-        Invoke("playAnim", 0.5f);
-        //hintText.text = "";
-        //InSceneTransition();
+        Invoke("playEntryAnim", 0.5f);
     }
-    void playAnim()
-    {
-        animator.SetTrigger("InTransition");
-    }
+
     void Setup()
     {
         if (GameManager.Instance == null)
@@ -54,6 +55,13 @@ public class UIManager : MonoBehaviour
         targetMoves.text = GameManager.Instance.GetTargetMoves().ToString();
         actualMoves.text = "0";
     }
+
+    void playEntryAnim()
+    {
+        animator.SetTrigger("InTransition");
+    }
+
+    #region Game pausing
     public void Pause()
     {
         //pausePanel.SetActive(true);
@@ -64,17 +72,25 @@ public class UIManager : MonoBehaviour
         //pausePanel.SetActive(false);
         animator.SetBool("paused", false);
     }
+    public void OnResumeButtonClicked()
+    {
+        GameManager.Instance.Resume();
+    }
+    #endregion
+
+
+    #region Target moves text
     public void SetMoveText(int m, MoveType type)
     {
         switch (type)
         {
-            case MoveType.underTarget:
+            case MoveType.UNDER_TARGET:
                 SetMovesTextColor(Color.white);
                 break;
-            case MoveType.ideal:
+            case MoveType.IDEAL:
                 SetMovesTextColor(Color.green);
                 break;
-            case MoveType.overTarget:
+            case MoveType.OVER_TARGET:
                 SetMovesTextColor(Color.red);
                 break;
         }
@@ -84,6 +100,28 @@ public class UIManager : MonoBehaviour
     {
         actualMoves.color = c;
     }
+    #endregion
+    #region Showing hint
+    public void ShowHint(string hint)
+    {
+        StartCoroutine(EnumerateOnLetters(hint));
+    }
+    IEnumerator EnumerateOnLetters(string str)
+    {
+        string startString = "";
+        for (int i = 0; i < str.Length; i++)
+        {
+            startString += str[i];
+            hintText.text = startString;
+            yield return new WaitForSeconds(0.1f);
+        }
+
+        yield return new WaitForSeconds(2.5f);
+        hintText.text = "";
+    }
+    #endregion
+
+    #region Level finishing
     public void SetWinPanel(bool star1,bool star2,bool star3)
     {
         animator.SetTrigger("Win");
@@ -100,10 +138,6 @@ public class UIManager : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         coinsStar.SetActive(s3);
     }
-    public void OnResumeButtonClicked()
-    {
-        GameManager.Instance.Resume();
-    }    
     public void OnNextLevelButtonClicked()
     {
         GameSaver.levelToLoad++;
@@ -125,25 +159,7 @@ public class UIManager : MonoBehaviour
     {
         MySceneManager.Instance.LoadScene(0);
     }
-
-    public void ShowHint(string hint)
-    {
-        StartCoroutine(EnumerateOnLetters(hint));
-    }
-    IEnumerator EnumerateOnLetters(string str)
-    {
-        string startString = "";
-        for(int i = 0; i<str.Length;i++)
-        {
-            startString += str[i];
-            hintText.text = startString;
-            yield return new WaitForSeconds(0.1f);
-        }
-
-        yield return new WaitForSeconds(2.5f);
-        hintText.text = "";
-    }
-
+    #endregion
 
     public void GoOutSceneTransition()
     {

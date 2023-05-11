@@ -13,12 +13,14 @@ public class Sound
 public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance;
-    public Sound[] soundEffects;
-    public Sound[] music;
-    AudioSource currentMusic;
-    Dictionary<string, AudioSource> SoundEffectsDictionary;
-    Dictionary<string, AudioSource> MusicDictionary;
-    float musicVolume;
+    [SerializeField] private Sound[] soundEffects;
+    [SerializeField] private Sound[] music;
+    private AudioSource currentMusic;
+
+    private Dictionary<string, AudioSource> SoundEffectsDictionary;
+    private Dictionary<string, AudioSource> MusicDictionary;
+    private float musicVolume;
+
     private void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
@@ -31,6 +33,8 @@ public class SoundManager : MonoBehaviour
             Instance = this;
         }
     }
+
+
     void SetVolumeAtStart()
     {
         if(PlayerPrefs.HasKey("MusicVolume"))
@@ -48,7 +52,8 @@ public class SoundManager : MonoBehaviour
         }
         SetSoundEffectsVolume(PlayerPrefs.GetFloat("SoundVolume"));
     }
-    // Start is called before the first frame update
+    
+
     void Start()
     {
         SoundEffectsDictionary = new Dictionary<string, AudioSource>();

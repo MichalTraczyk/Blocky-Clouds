@@ -6,17 +6,18 @@ using UnityEngine.Rendering;
 
 public class OptionsMenu : MonoBehaviour
 {
-    public RenderPipelineAsset highSettingsPipeline;
-    public RenderPipelineAsset lowSettingsPipeline;
-    public Toggle gfxToggle;
-    public Toggle volumeToggle;
+    [SerializeField] RenderPipelineAsset highSettingsPipeline;
+    [SerializeField] RenderPipelineAsset lowSettingsPipeline;
+    [SerializeField] Toggle gfxToggle;
+    [SerializeField] Toggle volumeToggle;
 
-    public Slider soundEffectsVolumeSlider;
-    public Slider musicEffectsVolumeSlider;
+    [SerializeField] Slider soundEffectsVolumeSlider;
+    [SerializeField] Slider musicEffectsVolumeSlider;
     private void Start()
     {
         bool gfxToggleBool = (PlayerPrefs.GetInt("goodGfx") == 1) ? true : false;
         bool volumeBool = (PlayerPrefs.GetInt("useVolume") == 1) ? true : false;
+
         gfxToggle.isOn = gfxToggleBool;
         volumeToggle.isOn = volumeBool;
         GraphicsSettingsToggleClicked();
@@ -46,7 +47,7 @@ public class OptionsMenu : MonoBehaviour
             GraphicsSettings.renderPipelineAsset = lowSettingsPipeline;
 
         if (GameManager.Instance != null)
-            GameManager.Instance.SetRenderSettings();
+            GFXManager.Instance.SetRenderSettings();
 
     }
     public void VolumeToggleClicked()
@@ -55,7 +56,7 @@ public class OptionsMenu : MonoBehaviour
         int i = (volumeToggle.isOn) ? 1 : 0;
         PlayerPrefs.SetInt("useVolume", i);
         if (GameManager.Instance != null)
-            GameManager.Instance.UpdatepostProcessingVolume();
+            GFXManager.Instance.UpdatepostProcessingVolume();
     }
 
     public void SliderValueChanged()

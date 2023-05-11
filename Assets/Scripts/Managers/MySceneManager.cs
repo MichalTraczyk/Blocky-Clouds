@@ -25,23 +25,11 @@ public class MySceneManager : MonoBehaviour
             return;
 
         Time.timeScale = 1;
-        //Debug.Log("Loading scene number: " + scene);
-        //Debug.Log("scene count in build settings - 1: " + (SceneManager.sceneCountInBuildSettings - 1));
         SoundManager.Instance.ChangeMusic();
         if (scene > SceneManager.sceneCountInBuildSettings - 1)
             StartCoroutine(loadScene(0));
         else
             StartCoroutine(loadScene(scene));
-
-
-
-        /*
-        List<int> scenesToLoad = new List<int>();
-        scenesToLoad.Add(1);
-        scenesToLoad.Add(scene);
-
-        StartCoroutine(LoadScenesAsync(scenesToLoad));*/
-        //StartCoroutine(AsyncSceneLoad(scene));
     }
 
     IEnumerator loadScene(int scene)

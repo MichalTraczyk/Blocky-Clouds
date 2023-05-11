@@ -50,7 +50,7 @@ public class PlayerMove : MonoBehaviour
             StartCoroutine(disableMovement(0.7f));
             return;
         }
-        if (GameManager.Instance.WallInFront(transform.position, move))
+        if (MoveManager.Instance.WallInFront(transform.position, move))
         {
             GameManager.Instance.HitWall(transform.position,move);
             GameManager.Instance.AddMoveCount();
@@ -58,7 +58,7 @@ public class PlayerMove : MonoBehaviour
             StartCoroutine(hitWallAnimation(move));
             return;
         }
-        if (!GameManager.Instance.ValidFloorCheck(transform.position + move))
+        if (!MoveManager.Instance.ValidFloorCheck(transform.position + move))
         {
             animator.SetTrigger("BadMove");
             StartCoroutine(disableMovement(0.7f));
